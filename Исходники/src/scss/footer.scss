@@ -1,0 +1,55 @@
+.footer {
+    background-color: $bgFooter;
+
+    &__inner {
+        padding-top: 5.4rem;
+        padding-bottom: 5.4rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__nav-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+    &__social {
+        display: flex;
+        gap: 1.5rem;
+    }
+}
+
+@media(max-width:805px) {
+    .footer {
+    
+        &__inner {
+            position: relative;
+            padding-left: 1.7rem;
+            padding-top: 4.2rem;
+            padding-bottom: 4.2rem;
+    
+            flex-direction: column;
+            align-items: start;
+            gap: 3.1rem;
+        }
+    
+        &__nav-menu {
+            flex-direction: column;
+            align-items: start;
+            gap: 1.5rem;
+        }
+    
+        &__social {
+            position: absolute;
+            top: 4.2rem;
+            right: 0;
+            display: flex;
+            gap: 1.5rem;
+        }
+    }
+
+}

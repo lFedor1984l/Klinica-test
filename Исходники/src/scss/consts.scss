@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+// Самый часто встречающий шрифт и размер
+//================================================================================================
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "PT Sans Caption", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    color: $colorTetxBlack;
+}
+
+// Стилизация контейнера
+//================================================================================================
+.container {
+    margin: 0 auto;
+    padding: 0rem 1.5rem;
+    max-width: 1170px;
+}
+
+.btn {
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+
+    font-size: 1.4em;
+    line-height: 2.1rem;
+
+    border-radius: 5rem;
+    border: none;
+}

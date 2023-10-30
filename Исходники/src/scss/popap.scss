@@ -1,0 +1,123 @@
+body.lock {
+    overflow: hidden;
+    padding-right: 15px;
+}
+
+.popap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease 0s;
+}
+
+.popap__active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popap__body {
+    padding: 30px 10px;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popap__content {
+    padding: 30px;
+    max-width: 800px;
+    background-color: #ffffff;
+    color: #000000;
+    position: relative;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+
+.popap__content-active {
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+    opacity: 1;
+}
+
+.popap__close {
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.popap__border {
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #000000;
+}
+
+.popap__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    white-space: pre-wrap;
+}
+
+.popap__form {
+    padding: 2rem;
+
+    border: 2px solid $bgHeader;
+
+    &-name,
+    &-email {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        label {
+            font-size: 1.6em;
+        }
+        input {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+
+            border: 2px solid $bgHeader;
+            outline: none;
+        }
+        &::placeholder {
+            font-family: inherit;
+        }
+    }
+
+    &-btn {
+        padding-left: 3rem;
+        padding-right: 3rem;
+
+        background-color: $bgHeader;
+        color: #ffffff;
+    }
+}
+
+@media (max-width: 525px) {
+    .popap__title {
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 450px) {
+    .popap__title {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    .popap__phone {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 340px) {
+    .popap__phone {
+        font-size: 22px;
+    }
+}

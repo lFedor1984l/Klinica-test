@@ -1,0 +1,29 @@
+//Флексы
+// @mixin flexCenter {
+//     display: flex;
+//     align-items: center;
+// }
+
+// @mixin flexSpaceBeetween {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+// }
+
+// @mixin flexColumn {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+//На крайний случай
+@mixin clearfix {
+    &::before,
+    &::after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+

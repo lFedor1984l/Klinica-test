@@ -1,0 +1,229 @@
+.form {
+    padding-top: 10.1rem;
+    padding-bottom: 9.2rem;
+
+    &__inner {
+        width: 114rem;
+        margin-bottom: 3.4rem;
+
+        background-image: url("../img/doctor-working.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right center;
+    }
+}
+
+.form__slider-img {
+    display: none;
+}
+
+.form__info {
+    width: 61.3rem;
+    height: 44rem;
+    padding: 5.3rem 14rem 5.6rem 6.3rem;
+
+    background-image: url("../img/bgForm.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+
+    &-title {
+        font-size: 3.8em;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &-subtitle {
+        margin-bottom: 1.6rem;
+
+        font-size: 2.2em;
+        font-weight: 700;
+    }
+
+    &-list {
+        margin-bottom: 3.3rem;
+        padding-left: 1.5rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        list-style: disc;
+    }
+
+    &-item {
+        font-size: 1.6em;
+
+        &::marker {
+            color: $bgHeader;
+        }
+    }
+}
+
+.form__price {
+    margin-bottom: 2.6rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    &-discount {
+        font-size: 2em;
+    }
+
+    &-full {
+        color: $colorTetxGray;
+
+        font-size: 1.6em;
+        line-height: 2.4rem;
+
+        text-decoration: line-through;
+    }
+}
+
+.form__send {
+    &-sign,
+    &-detail {
+        padding-left: 5.8rem;
+        padding-right: 5.8rem;
+        cursor: pointer;
+    }
+
+    &-sign {
+        margin-right: 1.4rem;
+
+        color: $colorTetxWhite;
+        background-color: $bgBtn;
+    }
+
+    &-detail {
+        background-color: transparent;
+        color: $bgBtn;
+
+        border: 1px solid $bgBtn;
+    }
+}
+
+.form__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.6rem;
+
+    &-number {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.form__send-int-l,
+.form__send-slesh,
+.form__send-int-r {
+    font-size: 1.8em;
+}
+
+.form__send-slesh,
+.form__send-int-r {
+    color: $colorTetxGray;
+}
+
+.prev__btn,
+.next__btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.form__slider {
+    overflow: hidden;
+    transition: all 1.5s ease;
+}
+
+.form__slider-item {
+    display: none;
+
+    width: 100%;
+    transition: all 1.5s ease;
+}
+
+.slider__active {
+    display: block;
+}
+
+@media (max-width: 950px) {
+    .form {
+        &__inner {
+            display: flex;
+            flex-direction: column;
+
+            width: 100%;
+
+            background-image: none !important;
+        }
+    }
+
+    .form__slider-img {
+        display: block;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .form__info {
+        display: block;
+        padding: 3rem;
+        width: 100%;
+        height: auto;
+
+        background-image: none !important;
+        background-color: #E2F0EF;
+    }
+}
+
+@media (max-width: 500px) {
+    .form__inner {
+        margin-bottom: 2.2rem;
+    }
+    .form__info {
+        padding: 2.2rem 3.7rem 4.2rem 2.2rem;
+        &-title {
+            font-size: 2.6em;
+        }
+        &-subtitle {
+            font-size: 1.4em;
+        }
+        &-list {
+            margin-bottom: 1.7rem;
+            padding-left: 1.5rem;
+            gap: 1rem;
+
+            list-style: disc;
+        }
+
+        &-item {
+            font-size: 1.4em;
+        }
+    }
+
+    .form__slider-img {
+        height: 170px;
+    }
+
+    .form__slider {
+        height: auto;
+    }
+
+    .form__send {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        &-sign,
+        &-detail {
+            padding-left: 2.8rem;
+            padding-right: 2.8rem;
+        }
+        &-sign {
+            margin-right: 0.6rem;
+        }
+    }
+}
